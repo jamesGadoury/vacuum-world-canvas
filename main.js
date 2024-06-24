@@ -481,6 +481,7 @@ window.onload = function() {
     const canvas = document.getElementById('worldCanvas');
     const ctx = canvas.getContext('2d');
 
+
     const agentSelectionInput = document.getElementById('agentSelection');
     const gridSizeInput = document.getElementById('gridSizeInput');
     const dirtCoveragePercentageInput = document.getElementById('dirtCoveragePercentageInput');
@@ -501,6 +502,23 @@ window.onload = function() {
         memory = {};
         draw(canvas, ctx, state);
     }
+
+    function resizeCanvas() {
+        if (window.innerWidth < 768) {
+            // Mobile dimensions
+            canvas.width = 300;
+            canvas.height = 150;
+        } else {
+            // Desktop dimensions
+            canvas.width = 800;
+            canvas.height = 400;
+        }
+
+        reset();
+    }
+
+    // Resize the canvas when the window is resized
+    window.addEventListener('resize', resizeCanvas);
 
     agentSelectionInput.addEventListener('change', function() {
         const newAgentSelection = agentSelectionInput.value;
@@ -563,6 +581,7 @@ window.onload = function() {
         requestAnimationFrame(animate);
     }
 
-    draw(canvas, ctx, state);
+    resizeCanvas();
     requestAnimationFrame(animate);
 };
+
