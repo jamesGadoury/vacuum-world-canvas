@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacuum Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="worldCanvas" width="400" height="400"></canvas>
+    </div>
+    <div class="controls">
+        <label for="agentSelection">Choose an agent:</label>
+        <select name="agentSelection" id="agentSelection">
+            <option value="goUp">GoUp</option>
+            <option value="goDown">GoDown</option>
+            <option value="goLeft">GoLeft</option>
+            <option value="goRight">GoRight</option>
+            <option value="randomMovement">RandomMovement</option>
+            <option value="nearestDirt">NearestDirt</option>
+            <option value="breadthFirstSearch">BreadthFirstSearch</option>
+            <option value="depthFirstSearch">DepthFirstSearch</option>
+            <option value="aStarSearch">A*Search</option>
+        </select>
+
+        <label for="gridSizeInput">Number of cells per row/col:</label>
+        <input type="range" id="gridSizeInput" min="5" max="100" value="10">
+
+        <label for="dirtCoveragePercentageInput">Percentage of available cells covered in dirt:</label>
+        <input type="range" id="dirtCoveragePercentageInput" min="10" max="100" value="30">
+
+        <label for="timeBetweenUpdatesInput">Time between updates (ms):</label>
+        <input type="range" id="timeBetweenUpdatesInput" min="33" max="2000" value="500">
+
+        <button id="resetButton">Reset</button>
+        <button id="playPauseButton">Play</button>
+        <h3>Agent logs:</h3>
+        <div id="log"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+

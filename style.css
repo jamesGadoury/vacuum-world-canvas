@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional: To give a background color */
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: calc(100% - 100px); /* Adjust height to make room for the input field and button */ */
+}
+
+#worldCanvas {
+    border: 1px solid black; /* Optional: To give a border to the canvas */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#log {
+    overflow-y: scroll;
+}
+
+#agentSelection, #timeBetweenUpdatesInput, #gridSizeInput, #dirtCoveragePercentageInput, #resetButton, #playPauseButton {
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 200px; /* Optional: Set a fixed width for the input field */
+}
+
