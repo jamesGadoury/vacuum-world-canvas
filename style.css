@@ -6,7 +6,9 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Optional: To give a background color */
+    background-color: #15202B;
+    color: #D7DADC;
+    font-weight: bold;
 }
 
 .canvas-container {
@@ -14,7 +16,7 @@ body, html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: calc(100% - 100px); /* Adjust height to make room for the input field and button */ */
+    background-color: #ffffff;
 }
 
 #worldCanvas {
